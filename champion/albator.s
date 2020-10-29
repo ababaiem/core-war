@@ -1,5 +1,5 @@
-.name "nagibator228"
-.comment "Ivan ne zabud napisat comment"
+.name "albator"
+.comment "albator, albator, le corsair de l'espace"
 
 live %1
 live %1
