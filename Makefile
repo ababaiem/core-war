@@ -6,7 +6,7 @@
 #    By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 18:02:36 by ababaie-          #+#    #+#              #
-#    Updated: 2020/10/29 18:02:39 by ababaie-         ###   ########.fr        #
+#    Updated: 2020/10/30 08:23:39 by ababaie-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,9 @@ $(NAME):
 	@make -C $(ASM_DIR)
 	@make -C $(COREWAR_DIR)
 	@cp $(ASM) ./asm
-	@cp $(ASM) ./Test_core/asm
+	@cp $(ASM) ./testing/asm
 	@cp $(COREWAR) ./corewar
-	@cp $(COREWAR) ./Test_core/vm
+	@cp $(COREWAR) ./testing/corewar
 
 clean:
 	@make -C $(LIB_DIR) clean
