@@ -6,7 +6,7 @@
 /*   By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 18:08:49 by ababaie-          #+#    #+#             */
-/*   Updated: 2020/10/30 10:22:32 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/30 10:24:17 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # define ASM_H
 
 # if defined(__linux__)
-	# define uint8_t __unint8_t
+	# define uint8_t _unint8_t
 #endif
 
 # include "libft.h"
