@@ -6,16 +6,12 @@
 /*   By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 18:13:11 by ababaie-          #+#    #+#             */
-/*   Updated: 2020/10/30 10:45:21 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/31 00:42:41 by alborz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COREWAR_H
 # define COREWAR_H
-
-#if defined(__linux__)
-	# include <stdint.h>
-#endif
 
 # include <libft.h>
 # include "op.h"

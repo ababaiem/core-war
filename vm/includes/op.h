@@ -6,9 +6,15 @@
 /*   By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 18:13:11 by ababaie-          #+#    #+#             */
-/*   Updated: 2020/10/29 18:13:11 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/31 00:42:52 by alborz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Resolved problem with Linux
+*/
+
+# include <stdint.h>
 
 /*
 ** Toutes les tailles sont en octets.
