@@ -6,13 +6,12 @@
 #    By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 18:03:22 by ababaie-          #+#    #+#              #
-#    Updated: 2020/10/29 18:03:23 by ababaie-         ###   ########.fr        #
+#    Updated: 2020/10/30 10:49:49 by ababaie-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = asm
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
 .PHONY: all clean fclean re
 
 # Sources
@@ -57,6 +56,14 @@ INCLUDES = \
 # Lib
 LIB_DIR = ../lib/
 LIB = -lft -L$(LIB_DIR)
+
+UNAME := $(shell uname)
+ifeq ($(UNAME), Linux)
+	FLAGS =
+endif
+ifeq ($(UNAME), Darwin)
+	FLAGS = -Wall -Wextra -Werror
+endif
 
 # Colors
 GREEN = @tput setaf 2; tput bold;

@@ -6,7 +6,7 @@
 #    By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 18:04:58 by ababaie-          #+#    #+#              #
-#    Updated: 2020/10/29 18:04:59 by ababaie-         ###   ########.fr        #
+#    Updated: 2020/10/30 10:50:52 by ababaie-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,9 +88,15 @@ CYAN = @tput setaf 6; tput bold;
 RESET = @tput setaf 7;
 
 
-
 CC = gcc
-FLAGS = -Wall -Werror -Wextra
+
+UNAME := $(shell uname)
+ifeq ($(UNAME), Linux)
+	FLAGS =
+endif
+ifeq ($(UNAME), Darwin)
+	FLAGS = -Wall -Wextra -Werror
+endif
 
 all: $(NAME)
 
