@@ -1,26 +1,25 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    salamahenagalabadoun.s                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+         #
+#    By: gjestin <gjestin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/10/30 08:36:27 by ababaie-          #+#    #+#              #
-#    Updated: 2020/10/30 08:36:30 by ababaie-         ###   ########.fr        #
+#    Created: 2014/02/21 22:08:42 by gjestin           #+#    #+#              #
+#    Updated: 2014/02/25 21:02:17 by gjestin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-clear:
-	@sh ./clear.sh
+.name "salamahenagalabadoun"
+.comment "sussKBO hin hin"
 
-create:
-	@sh ./create_champs.sh
-
-test_valid:
-	@sh func_test.sh
-
-test_not_valid:
-	@sh func_test_not_valid.sh
-
-test_wrong:
-	@sh create_wrong.sh
+ld		32, r3
+ld		4, r4
+ld		190, r5
+st		r1, 6
+loop:
+live	%666
+sti		r5, r5, r3
+add		r3, r4, r5
+ld		%0, r16
+zjmp	%:loop
