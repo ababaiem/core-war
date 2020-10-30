@@ -6,7 +6,7 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:10:00 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/09/15 20:10:01 by cchadwic         ###   ########.fr       */
+/*   Updated: 2020/10/30 10:17:59 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	pf_putwchar(t_printf *p, unsigned int wc, int wlen, int nb_bytes)
 {
 	char	tmp[4];
 
-	if (nb_bytes <= wlen && nb_bytes <= MB_CUR_MAX)
+	if (nb_bytes <= wlen && nb_bytes <= (int)MB_CUR_MAX)
 	{
 		if (nb_bytes == 1)
 			tmp[0] = wc;
