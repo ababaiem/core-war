@@ -6,17 +6,13 @@
 /*   By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 18:08:49 by ababaie-          #+#    #+#             */
-/*   Updated: 2020/10/30 10:30:51 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/31 00:43:48 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ASM_H
 
 # define ASM_H
-
-#if defined(__linux__)
-	# include <stdint.h>
-#endif
 
 # include "libft.h"
 # include "op.h"

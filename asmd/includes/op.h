@@ -6,9 +6,15 @@
 /*   By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 18:08:49 by ababaie-          #+#    #+#             */
-/*   Updated: 2020/10/29 18:08:49 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/31 00:43:59 by alborz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Added to resolve problems with Linux
+*/
+
+# include <stdint.h>
 
 #ifndef OP_H
 
