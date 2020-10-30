@@ -6,19 +6,19 @@
 /*   By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 18:08:49 by ababaie-          #+#    #+#             */
-/*   Updated: 2020/10/31 00:43:59 by alborz           ###   ########.fr       */
+/*   Updated: 2020/10/31 00:48:58 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef OP_H
+
+# define OP_H
 
 /*
 ** Added to resolve problems with Linux
 */
 
 # include <stdint.h>
-
-#ifndef OP_H
-
-# define OP_H
 
 # define IND_SIZE				2
 # define REG_SIZE				4

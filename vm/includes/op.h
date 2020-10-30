@@ -6,15 +6,9 @@
 /*   By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 18:13:11 by ababaie-          #+#    #+#             */
-/*   Updated: 2020/10/31 00:42:52 by alborz           ###   ########.fr       */
+/*   Updated: 2020/10/31 00:47:49 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** Resolved problem with Linux
-*/
-
-# include <stdint.h>
 
 /*
 ** Toutes les tailles sont en octets.
@@ -23,6 +17,12 @@
 
 #ifndef OP_H
 # define OP_H
+
+/*
+** Resolved problem with Linux
+*/
+
+# include <stdint.h>
 
 # define IND_SIZE				2
 # define REG_SIZE				4
