@@ -6,7 +6,7 @@
 #    By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 18:02:36 by ababaie-          #+#    #+#              #
-#    Updated: 2020/10/30 08:23:39 by ababaie-         ###   ########.fr        #
+#    Updated: 2020/10/30 08:29:00 by ababaie-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,9 @@ COREWAR		= $(COREWAR_DIR)corewar
 # asm
 ASM_DIR = asmd/
 ASM 	= $(ASM_DIR)asm
+
+# testing
+TEST_DIR = testing/
 
 
 all: $(NAME)
@@ -52,3 +55,10 @@ fclean: clean
 re:
 	@make fclean
 	@make all
+
+test: re
+	@make -C $(TEST_DIR) clear
+	@make -C $(TEST_DIR) create
+	@make -C $(TEST_DIR) test_valid
+	@make -C $(TEST_DIR) test_not_valid
+	@make -C $(TEST_DIR) test_wrong
