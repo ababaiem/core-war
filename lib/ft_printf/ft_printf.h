@@ -6,12 +6,18 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:09:33 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/10/30 10:03:43 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/30 10:10:08 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+
+#if defined(__linux__)
+	# define OPEN_MAX _SC_OPEN_MAX
+	# define intmax_t __intmax_t
+	# define uintmax_t __uintmax_t
+#endif
 
 /*
 ** -------------------------- External Headers ---------------------------------
