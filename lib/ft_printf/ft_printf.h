@@ -6,7 +6,7 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:09:33 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/09/15 20:09:35 by cchadwic         ###   ########.fr       */
+/*   Updated: 2020/10/30 10:03:43 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@
 ** -------------------------- Macros Definition --------------------------------
 */
 
-# define MAX(a, b)		b & ((a - b) >> 31) | a & (~(a - b) >> 31)
-# define MIN(a, b)		a & ((a - b) >> 31) | b & (~(a - b) >> 31)
-# define ABS(a)			(a < 0) ? -a : a
-# define DABS(a)		(a < 0.0f) ? -a : a
+# define MAX(a, b)		(((b) & (((a) - (b)) >> 31)) | ((a) & (~((a) - (b)) >> 31)))
+# define MIN(a, b)		(((a) & (((a) - (b)) >> 31)) | ((b) & (~((a) - (b)) >> 31)))
+# define ABS(a)			(((a) < 0) ? -(a) : (a))
+# define DABS(a)		(((a) < 0.0f) ? -(a) : (a))
 # define STRERR			strerror
 
 /*
