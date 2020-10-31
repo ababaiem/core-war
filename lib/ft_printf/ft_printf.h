@@ -6,18 +6,14 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:09:33 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/10/30 10:10:08 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/31 00:57:45 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#if defined(__linux__)
-	# define OPEN_MAX _SC_OPEN_MAX
-	# define intmax_t __intmax_t
-	# define uintmax_t __uintmax_t
-#endif
+# include <stdint.h>
 
 /*
 ** -------------------------- External Headers ---------------------------------
@@ -54,22 +50,41 @@
 ** --------------------------- Masks Definition --------------------------------
 */
 
-# define F_SHARP		(1 << 0)
-# define F_SPACE		(1 << 1)
-# define F_PLUS			(1 << 2)
-# define F_MINUS		(1 << 3)
-# define F_ZERO			(1 << 4)
-# define F_WILDCARD		(1 << 5)
-# define F_UPCASE		(1 << 6)
-# define F_SHORT		(1 << 7)
-# define F_SHORT2		(1 << 8)
-# define F_LONG			(1 << 9)
-# define F_LONG2		(1 << 10)
-# define F_INTMAX		(1 << 11)
-# define F_SIZE_T		(1 << 12)
-# define F_MIN_LEN		(1 << 13)
-# define F_APP_PRECI	(1 << 14)
-# define F_POINTER		(1 << 15)
+/*
+**(1 << 0) = 0x1
+**(1 << 1) = 0x2
+**(1 << 2) = 0x4
+**(1 << 3) = 0x8
+**(1 << 4) = 0x10
+**(1 << 5) = 0x20
+**(1 << 6) = 0x40
+**(1 << 7) = 0x80
+**(1 << 8) = 0x100
+**(1 << 9) = 0x200
+**(1 << 10) = 0x400
+**(1 << 11) = 0x800
+**(1 << 12) = 0x1000
+**(1 << 13) = 0x2000
+**(1 << 14) = 0x4000
+**(1 << 15) = 0x8000
+*/
+
+# define F_SHARP		0x1
+# define F_SPACE		0x2
+# define F_PLUS			0x4
+# define F_MINUS		0x8
+# define F_ZERO			0x10
+# define F_WILDCARD		0x20
+# define F_UPCASE		0x40
+# define F_SHORT		0x80
+# define F_SHORT2		0x100
+# define F_LONG			0x200
+# define F_LONG2		0x400
+# define F_INTMAX		0x800
+# define F_SIZE_T		0x1000
+# define F_MIN_LEN		0x2000
+# define F_APP_PRECI	0x4000
+# define F_POINTER		0x8000
 # define PF_BUF_SIZE	64
 
 /*
