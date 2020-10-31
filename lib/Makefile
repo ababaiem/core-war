@@ -6,7 +6,7 @@
 #    By: ababaie- <ababaie-@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 18:04:48 by ababaie-          #+#    #+#              #
-#    Updated: 2020/10/29 18:04:51 by ababaie-         ###   ########.fr        #
+#    Updated: 2020/10/31 01:01:33 by ababaie-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,6 +95,8 @@ LIB_SRCS = ft_memset \
 	   ft_wcharlen \
 	   ft_wstrlen \
 	   ft_pow \
+		 ft_max \
+		 ft_min \
 
 OBJ =	$(addprefix obj/, $(addsuffix .o, $(LIB_SRCS))) $(addprefix obj/, $(addsuffix .o, $(PRINTF_SRCS)))
 

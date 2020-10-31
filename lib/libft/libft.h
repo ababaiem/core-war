@@ -6,7 +6,7 @@
 /*   By: oelaina <oelaina@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 11:09:26 by skrabby           #+#    #+#             */
-/*   Updated: 2019/11/27 22:13:00 by oelaina          ###   ########.fr       */
+/*   Updated: 2020/10/31 01:00:54 by ababaie-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,7 @@ int					ft_fprintf(int fd, const char *s, ...);
 size_t				ft_wcharlen(unsigned c);
 size_t				ft_wstrlen(unsigned *s);
 double				ft_pow(double n, int pow);
+int					ft_max(const int a, const int b);
+int					ft_min(const int a, const int b);
 
 #endif
