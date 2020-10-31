@@ -6,7 +6,7 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:10:09 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/09/15 20:10:10 by cchadwic         ###   ########.fr       */
+/*   Updated: 2020/10/31 01:26:24 by alborz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ static void	field_width_precision(t_printf *p)
 {
 	if (48 < *p->format && *p->format < 58)
 	{
-		p->min_length = MAX(1, ft_atoi(p->format));
+		p->min_length = ft_max(1, ft_atoi(p->format));
 		while (47 < *p->format && *p->format < 58)
 			++p->format;
 	}
 	if (*p->format == '.')
 	{
 		++p->format;
-		p->precision = MAX(ft_atoi(p->format), 0);
+		p->precision = ft_max(ft_atoi(p->format), 0);
 		while (47 < *p->format && *p->format < 58)
 			++p->format;
 		p->f |= F_APP_PRECI;

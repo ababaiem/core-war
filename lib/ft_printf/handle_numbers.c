@@ -6,7 +6,7 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:09:49 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/09/15 20:09:50 by cchadwic         ###   ########.fr       */
+/*   Updated: 2020/10/31 01:27:15 by alborz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	itoa_printf(intmax_t n, t_printf *p, int len)
 	char		s[21];
 	uintmax_t	tmp;
 
-	tmp = ABS(n);
+	tmp = (((n) < 0) ? -(n) : (n));
 	while (tmp)
 	{
 		tmp /= 10;
@@ -64,12 +64,12 @@ void	itoa_printf(intmax_t n, t_printf *p, int len)
 	}
 	if ((n < 0 || p->f & F_PLUS || p->f & F_SPACE) && p->f & F_ZERO)
 		--p->precision;
-	p->printed = MAX(len, p->precision);
+	p->printed = ft_max(len, p->precision);
 	if (n < 0 || p->f & F_PLUS || p->f & F_SPACE)
 		++p->printed;
 	p->padding = (p->printed > p->min_length) ? 0 : p->min_length - p->printed;
 	padding(p, 0);
-	tmp = ABS(n);
+	tmp = (((n) < 0) ? -(n) : (n));
 	itoa_base_fill(tmp, 10, s, p);
 	(p->f & F_SPACE) ? s[0] = ' ' : 0;
 	(n < 0) ? s[0] = '-' : 0;
@@ -90,12 +90,12 @@ void	itoa_base_printf(uintmax_t n, int b, t_printf *p)
 		tmp /= b;
 	(p->f & F_ZERO) ? p->precision = p->min_length : 0;
 	ext = (p->printed >= p->precision) ? 0 : 1;
-	p->printed = MAX(p->precision, p->printed);
+	p->printed = ft_max(p->precision, p->printed);
 	((p->f & F_SHARP) && b == 8 && !ext) ? --p->min_length : 0;
 	((p->f & F_SHARP) && b == 8 && !n && (p->f & F_APP_PRECI)) ?
 	++p->printed : 0;
 	((p->f & F_SHARP) && b == 16 && !(p->f & F_ZERO)) ? p->min_length -= 2 : 0;
-	p->padding = MAX(0, (p->min_length - p->printed));
+	p->padding = ft_max(0, (p->min_length - p->printed));
 	padding(p, 0);
 	if ((n || (p->f & F_POINTER))
 		&& (p->f & F_SHARP) && ((b == 8 && !ext) || (b == 16)))

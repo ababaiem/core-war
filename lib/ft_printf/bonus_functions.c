@@ -6,7 +6,7 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:09:07 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/09/15 20:09:09 by cchadwic         ###   ########.fr       */
+/*   Updated: 2020/10/31 01:18:43 by alborz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void		ldtoa_fill(double n, t_printf *p, long value)
 		value /= 10;
 	}
 	(p->precision > 0) ? s[len] = '.' : 0;
-	value = (long)(ABS(n));
+	value = (long)(((n) < 0) ? -(n) : (n));
 	while (++accuracy < len)
 	{
 		s[len - accuracy - 1] = value % 10 + '0';
@@ -77,7 +77,7 @@ void			pf_putdouble(t_printf *p)
 	if (!(p->f & F_APP_PRECI))
 		p->precision = 6;
 	len = (p->precision > 0) ? 1 : 0;
-	tmp = (long)(ABS(n));
+	tmp = (long)(((n) < 0) ? -(n) : (n));
 	while (tmp && ++len)
 		tmp /= 10;
 	(p->f & F_ZERO) ? p->precision = p->min_length : 0;

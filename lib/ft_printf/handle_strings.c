@@ -6,7 +6,7 @@
 /*   By: cchadwic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 20:10:00 by cchadwic          #+#    #+#             */
-/*   Updated: 2020/10/30 10:17:59 by ababaie-         ###   ########.fr       */
+/*   Updated: 2020/10/31 01:27:53 by alborz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ void	pf_putwstr(t_printf *p)
 	else
 	{
 		wlen = (int)(ft_wstrlen((unsigned *)s));
-		(p->f & F_APP_PRECI) ? wlen = MIN(p->precision, wlen) : 0;
-		p->padding = MAX(p->min_length - wlen, 0);
+		(p->f & F_APP_PRECI) ? wlen = ft_min(p->precision, wlen) : 0;
+		p->padding = ft_max(p->min_length - wlen, 0);
 		if (p->precision == 4 && p->min_length == 15 && wlen == 4)
 			++p->padding;
 		p->f = (p->min_length > p->precision) ?
@@ -79,7 +79,7 @@ void	pf_putstr(t_printf *p)
 	else
 	{
 		len = (int)(ft_strlen((char*)s));
-		(p->f & F_APP_PRECI) ? len = MIN(p->precision, len) : 0;
+		(p->f & F_APP_PRECI) ? len = ft_min(p->precision, len) : 0;
 		p->padding = (p->min_length - len) > 0 ? (p->min_length - len) : 0;
 		padding(p, 0);
 		buffer(p, s, len);
